@@ -1,0 +1,5 @@
+*.tif
+*.vrt
+*.ovr
+__pycache__/
+.env
