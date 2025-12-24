@@ -5,7 +5,7 @@ from osgeo import gdal, osr
 gdal.UseExceptions()
 
 # Directory with your files
-directory = r"C:\Users\4ourfuture\Documents\UCL PhD\Topology Files"
+directory = r""
 
 # .lbl files (open these – GDAL needs the label for correct metadata)
 lbl_files = [
@@ -69,5 +69,6 @@ print("   Float32, units: meters relative to Mars areoid.")
 # Optional: Add overviews for faster display in GIS software
 print("Adding overviews (this may take a few minutes)...")
 os.system(f"gdaladdo -ro --config COMPRESS_OVERVIEW DEFLATE --config PREDICTOR_OVERVIEW 2 {tif_output} 2 4 8 16 32 64")
+
 
 print("All done!")
